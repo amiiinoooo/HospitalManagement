@@ -5,7 +5,8 @@ import javafx.scene.control.*;
 
 public class LoginController {
     @FXML private TextField emailField;
-    @FXML private PasswordField passwordField;
+    @FXML private TextField firstNameField;
+    @FXML private TextField lastNameField;
     @FXML private ComboBox<String> roleComboBox;
     @FXML private Label messageLabel;
 
@@ -17,13 +18,14 @@ public class LoginController {
     @FXML
     public void handleLogin() {
         String email = emailField.getText();
-        String password = passwordField.getText();
+        String firstName = firstNameField.getText();
+        String lastName = lastNameField.getText();
         String role = roleComboBox.getValue();
 
-        if (email.isEmpty() || password.isEmpty() || role == null) {
+        if (email.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || role == null) {
             messageLabel.setText("Please fill all fields");
         } else {
-            messageLabel.setText("Welcome " + role + "!");
+            messageLabel.setText("Welcome " + firstName + " " + lastName + " (" + role + ")!");
             // You can add authentication logic here
             // Example: switch to dashboard based on role
             if ("Customer".equals(role)) {
