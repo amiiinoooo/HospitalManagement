@@ -6,9 +6,15 @@ import java.sql.SQLException;
 
 public class DatabaseUtil {
     // Database connection parameters
-    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3307/hoteldb";
-    private static final String DB_USER = "root"; // Replace with your MySQL username
-    private static final String DB_PASSWORD = "y2K25#sql"; // Replace with your MySQL password
+    // Read from environment variables so no credentials are stored in the source code
+    private static final String DB_URL = envOrDefault("DB_URL", "jdbc:mysql://127.0.0.1:3307/hoteldb");
+    private static final String DB_USER = envOrDefault("DB_USER", "root");
+    private static final String DB_PASSWORD = envOrDefault("DB_PASSWORD", "");
+
+    private static String envOrDefault(String name, String fallback) {
+        String value = System.getenv(name);
+        return (value == null || value.isEmpty()) ? fallback : value;
+    }
 
     private static Connection connection;
 
