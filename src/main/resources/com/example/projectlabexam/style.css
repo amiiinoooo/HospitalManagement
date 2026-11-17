@@ -1,59 +1,87 @@
+/* Adding standard properties for compatibility */
 .root {
+    font-family: 'Segoe UI', sans-serif; /* Standard property */
     -fx-font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fa; /* Standard property */
     -fx-background-color: #f4f7fa; /* Soft light background */
 }
 
 /* Header bar */
 .header-bar {
+    background-color: #1e3a8a; /* Standard property */
     -fx-background-color: #1e3a8a; /* Dark blue background */
+    padding: 20px; /* Standard property */
     -fx-padding: 20; /* Increased padding for a bigger header */
 }
 
 .header-title {
+    color: white; /* Standard property */
     -fx-text-fill: white;
+    font-size: 48px; /* Standard property */
     -fx-font-size: 48px; /* Larger font size for header text */
+    font-weight: bold; /* Standard property */
     -fx-font-weight: bold;
 }
 
 /* TitledPane look */
 .titled-pane {
+    background-color: #ffffff; /* Standard property */
     -fx-background-color: #ffffff;
+    color: #4f4f4f; /* Standard property */
     -fx-text-fill: #4f4f4f; /* Darker gray for text */
+    border-radius: 8px; /* Standard property */
     -fx-border-radius: 8;
     -fx-background-radius: 8;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.2, 0, 1);
 }
 
 .titled-pane > .title {
+    background-color: #8aacc8; /* Standard property */
     -fx-background-color: #8aacc8; /* Soft light blue */
+    color: white; /* Standard property */
     -fx-text-fill: white;
+    font-weight: bold; /* Standard property */
     -fx-font-weight: bold;
+    padding: 10px; /* Standard property */
     -fx-padding: 10;
+    border-radius: 8px 8px 0 0; /* Standard property */
     -fx-background-radius: 8 8 0 0;
 }
 
 /* General buttons */
 .button {
+    background-color: #5f6368; /* Standard property */
     -fx-background-color: #5f6368; /* Darker muted tone */
+    color: white; /* Standard property */
     -fx-text-fill: white;
+    font-weight: bold; /* Standard property */
     -fx-font-weight: bold;
+    padding: 8px 16px; /* Standard property */
     -fx-padding: 8 16;
+    border-radius: 6px; /* Standard property */
     -fx-background-radius: 6;
+    cursor: pointer; /* Standard property */
     -fx-cursor: hand;
 }
 
 .button:disabled {
+    background-color: #e0e0e0; /* Standard property */
     -fx-background-color: #e0e0e0; /* Soft gray for disabled button */
 }
 
 /* Inputs */
 .date-picker, .combo-box {
+    border-radius: 6px; /* Standard property */
     -fx-background-radius: 6;
+    padding: 6px; /* Standard property */
     -fx-padding: 6;
+    background-color: #f0f4f8; /* Standard property */
     -fx-background-color: #f0f4f8; /* Very light gray-blue background */
 }
 
 .label {
+    color: #555555; /* Standard property */
     -fx-text-fill: #555555; /* Dark gray for text */
+    font-size: 13px; /* Standard property */
     -fx-font-size: 13px;
 }

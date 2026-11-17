@@ -27,22 +27,39 @@ Each fix was analysed in terms of its impact on **confidentiality, integrity and
 
 ## Tech stack
 
-Java 17 · JavaFX (FXML, ControlsFX) · MySQL · JDBC · Maven · BCrypt
+Java 17 · JavaFX (FXML, ControlsFX) · MySQL · JDBC · Maven · jBCrypt · Jakarta Mail (SMTP)
+
+## Where to find the security code
+
+| Protection | File |
+|---|---|
+| Input validation & sanitization | `utils/InputSanitizer.java`, `utils/PasswordValidator.java` |
+| Password hashing (BCrypt) | `utils/PasswordHasher.java` |
+| E-mail verification / 2FA tokens | `TokenService.java`, `EmailService.java`, `VerifyController.java` |
+| Staff approval workflow | `VerifyController.java`, `StaffDashboardController.java` |
+| SQL injection protection | `PreparedStatement` in every controller and `DatabaseUtil.java` |
+| Brute-force lockout | `LoginController.java` |
+| Password reset | `ForgotPasswordController.java` |
 
 ## Run locally
 
 1. Install **JDK 17+** and **MySQL**, and create a database named `hoteldb`.
-2. Set your database credentials as environment variables (they are no longer hard-coded):
+2. Set your credentials as environment variables (nothing secret is stored in the code):
    ```bash
    # macOS / Linux
-   export DB_URL="jdbc:mysql://127.0.0.1:3307/hoteldb"
+   export DB_URL="jdbc:mysql://127.0.0.1:3306/hoteldb"
    export DB_USER="root"
    export DB_PASSWORD="your_password"
+   export SMTP_USER="you@gmail.com"            # account that sends verification codes
+   export SMTP_APP_PASSWORD="your_app_password" # Gmail app password
    ```
    ```powershell
    # Windows PowerShell
    $env:DB_PASSWORD="your_password"
+   $env:SMTP_USER="you@gmail.com"
+   $env:SMTP_APP_PASSWORD="your_app_password"
    ```
+   Then run `src/main/resources/create_forgotten_password_token_table.sql` on the database.
 3. Run the app:
    ```bash
    ./mvnw clean javafx:run

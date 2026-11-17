@@ -19,14 +19,17 @@
         <VBox alignment="CENTER" spacing="15.0" style="-fx-padding: 40;">
             <TextField fx:id="emailField" promptText="Email" prefWidth="250"
                        style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: white;" />
-            <TextField fx:id="firstNameField" promptText="First Name" prefWidth="250"
-                       style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: white;" />
-            <TextField fx:id="lastNameField" promptText="Last Name" prefWidth="250"
-                       style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: white;" />
-            <ComboBox fx:id="roleComboBox" promptText="Select Role" prefWidth="250"
-                      style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: white;" />
+            <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250"
+                           style="-fx-background-radius: 8; -fx-padding: 8; -fx-background-color: white;" />
+            <HBox alignment="CENTER_LEFT" prefWidth="250">
+                <Hyperlink text="Forgot Password?" onAction="#goToForgotPassword"
+                           style="-fx-text-fill: #FF6347; -fx-font-weight: bold;" />
+            </HBox>
             <Button text="Login" onAction="#handleLogin" prefWidth="150"
                     style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 8; -fx-cursor: hand;" />
+            <Button text="Sign Up" onAction="#goToSignUp" prefWidth="150"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;
                            -fx-background-radius: 8; -fx-cursor: hand;" />
             <Label fx:id="messageLabel" textFill="red" style="-fx-font-size: 14px;" />
         </VBox>

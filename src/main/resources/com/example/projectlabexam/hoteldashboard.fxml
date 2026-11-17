@@ -13,8 +13,9 @@
     <top>
         <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header-bar">
             <Label text="🏨 Customer Dashboard" styleClass="header-title" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+            <Label fx:id="customerNameLabel" text="Customer: John Doe" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <Button text="Back to Login" onAction="#backToLogin" />
+            <Button text="Sign Out" onAction="#backToLogin" />
         </HBox>
     </top>
 
@@ -25,7 +26,7 @@
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
 
-            <TitledPane text="Book a Room" expanded="true">
+            <TitledPane text="Book a room" expanded="true">
                 <VBox spacing="10">
                     <padding>
                         <Insets top="10" right="10" bottom="10" left="10"/>
@@ -45,12 +46,28 @@
                 </VBox>
             </TitledPane>
 
-            <TitledPane text="View My Booking" expanded="true">
+            <TitledPane text="Result" expanded="true">
                 <VBox spacing="10">
                     <padding>
                         <Insets top="10" right="10" bottom="10" left="10"/>
                     </padding>
                     <Label fx:id="bookingDetails"/>
+                </VBox>
+            </TitledPane>
+
+            <TitledPane text="View my bookings" expanded="false">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <TableView fx:id="bookingHistoryTable" prefHeight="175" minHeight="100" maxHeight="250">
+                        <columns>                            <TableColumn fx:id="historyRoomColumn" text="Room" prefWidth="120" minWidth="100" />
+                            <TableColumn fx:id="historyCheckInColumn" text="Check-in" prefWidth="140" minWidth="120" />
+                            <TableColumn fx:id="historyCheckOutColumn" text="Check-out" prefWidth="140" minWidth="120" />
+                            <TableColumn fx:id="historyStatusColumn" text="Status" prefWidth="110" minWidth="90" />
+                            <TableColumn fx:id="historyActionsColumn" text="Actions" prefWidth="100" minWidth="90" />
+                        </columns>
+                    </TableView>
                 </VBox>
             </TitledPane>
 
