@@ -1,8 +1,10 @@
 # 🏨 Hotel Management App: Secure JavaFX Application
 
-A desktop hotel management platform for **clients** and **staff**, built in a team with **Java 17, JavaFX and MySQL**. Clients create an account, browse available rooms and book stays with check-in/check-out dates. Staff and admins manage bookings, users, roles and access requests from dashboards.
+> 💼 **Cybersecurity internship at Network Associates (NA), Summer 2025**
 
-> **My role:** I was responsible for the **security** of the application: analysing its vulnerabilities and implementing the protections below.
+A desktop hotel management platform for **clients** and **staff**, built with **Java 17, JavaFX and MySQL**. Clients create an account, browse available rooms and book stays with check-in/check-out dates. Staff and admins manage bookings, users, roles and access requests from dashboards.
+
+> **My role:** during my internship I was responsible for the **security** of the application: analysing its vulnerabilities and implementing the protections below.
 
 ## 🔐 Security hardening (my contribution)
 
@@ -65,6 +67,6 @@ Java 17 · JavaFX (FXML, ControlsFX) · MySQL · JDBC · Maven · jBCrypt · Jak
    ./mvnw clean javafx:run
    ```
 
-## Team
+## Credits
 
-Team project, originally created in [Gaston202/HospitalManagement](https://github.com/Gaston202/HospitalManagement).
+Developed during a cybersecurity internship at **Network Associates (NA)**, Summer 2025. The base application started in [Gaston202/HospitalManagement](https://github.com/Gaston202/HospitalManagement); the security hardening above is my work.
