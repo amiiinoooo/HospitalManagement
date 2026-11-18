@@ -67,6 +67,10 @@ Java 17 · JavaFX (FXML, ControlsFX) · MySQL · JDBC · Maven · jBCrypt · Jak
    ./mvnw clean javafx:run
    ```
 
+## Report
+
+- 📄 [Internship report (INT101)](docs/Amine.BenNasrallah_INT%20101%20-%20Clean.pdf)
+
 ## Credits
 
 Developed during a cybersecurity internship at **Network Associates (NA)**, Summer 2025. The base application started in [Gaston202/HospitalManagement](https://github.com/Gaston202/HospitalManagement); the security hardening above is my work.
