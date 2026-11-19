@@ -1,6 +1,6 @@
 # 🏨 Hotel Management App: Secure JavaFX Application
 
-> 💼 **Cybersecurity internship at Network Associates (NA), Summer 2025**
+> 💼 **Cybersecurity Internship at Network Associates (NA), Summer 2025**
 
 A desktop hotel management platform for **clients** and **staff**, built with **Java 17, JavaFX and MySQL**. Clients create an account, browse available rooms and book stays with check-in/check-out dates. Staff and admins manage bookings, users, roles and access requests from dashboards.
 
